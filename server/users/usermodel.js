@@ -1,5 +1,5 @@
 var mongoose=require('mongoose');
-mongoose.connect("mongodb://localhost/db");
+mongoose.connect("mongodb://192.168.139./db");
 var userschema=new mongoose.Schema({
     name:{type:String,required:true,unique:true},
     password:{type:String,required:true}

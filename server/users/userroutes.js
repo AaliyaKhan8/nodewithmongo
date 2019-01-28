@@ -9,6 +9,9 @@ route.post('/new',function(req,res){
     console.log("new",req.body);
     usrcontroller.createUsers(req,res)
 })
+
+route.post('/auth',usrcontroller.validateUser,usrcontroller.authenticate);
+
 route.use('*',function(err,req,res,next){
     throw new Error("operation not allowed")
 })
